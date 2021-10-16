@@ -1,7 +1,8 @@
-//const Jogador = require('./jogador.js');
+
 
 window.onload = function () { 
-    console.log(Jogador);
+    var jogador;
+
     var qtdJogador = document.querySelector("#numero");
 
         qtdJogador.addEventListener("keyup", () => { 
@@ -17,12 +18,34 @@ window.onload = function () {
                 p.innerText = "jogador "+i;
                 var input = document.createElement("input");
                 input.classList.add("form-control");
-                input.id = "jogador-"+1;
+                input.id = "jogador-"+i;
 
                 div.appendChild(p);
                 div.appendChild(input);
             }
             document.querySelector("#jogadores").appendChild(div);
+            
             qtdJogador.innerText="";
         }
+
+        function getStart(){
+            var jogadores = document.querySelector("#jogadores > div");
+            if(jogadores.childElementCount > 2){
+                var inputs = jogadores.childElementCount/2;
+                if(inputs / 2 === 1){
+                    for(let i = 0 ; i < inputs.length; i++){
+                        console.log(jogadores.children[i].value)    
+                    }
+                }
+            }else{
+                console.log(jogadores.children[1].value)
+            }
+        }
 } 
+
+class Jogador {
+    
+    constructor(){
+        console.log("OK")
+    }
+};
