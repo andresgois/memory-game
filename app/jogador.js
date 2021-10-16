@@ -1,8 +1,8 @@
 
 
-export const jogador = {
-    nome,
-    vez,
-    pontos
-}
-
+export default class jogador {
+    
+    constructor(){
+        console.log("OK")
+    }
+};
