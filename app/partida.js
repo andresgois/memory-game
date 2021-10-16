@@ -1,0 +1,12 @@
+
+
+class Partida {
+
+    constructor(){
+
+    }
+
+    matriz(){
+        
+    }
+}

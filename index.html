@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da memória</title>
+    
+</head>
+
+<body>
+    <main>
+        <h1> digite a quantidade de jogadores</h1>
+        <article> 
+            <h3>N° jogador</h3>
+            <input type="number" name="numero" id="numero" maxlength="1" size="2">
+        </article>
+
+        <article id="jogadores">
+
+        </article>
+        
+    </main>
+
+    <!-- <a href="./pagina.html">Start</a> -->
+    <script>
+        var qtdJogador = document.querySelector("#numero");
+
+        qtdJogador.addEventListener("keyup", () => { 
+            //alert("hello")
+            
+            var n = Number(qtdJogador.value);
+            quantidadeJogador(n);
+            
+        });
+
+        function quantidadeJogador(x){            
+            document.querySelector("#jogadores").innerText ="";
+            var div = document.createElement("div");
+            for(let i = 1 ; i <= x ; i++){
+                var p = document.createElement("p");
+                p.innerText = "jogador "+i;
+                var input = document.createElement("input");
+
+                div.appendChild(p);
+                div.appendChild(input);
+            }
+            document.querySelector("#jogadores").appendChild(div);
+            qtdJogador.innerText="";
+        }
+    </script>
+
+    
+</body>
+</html>
