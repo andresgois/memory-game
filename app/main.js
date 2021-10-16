@@ -7,7 +7,7 @@ window.onload = function () {
 
         qtdJogador.addEventListener("keyup", () => { 
             var n = Number(qtdJogador.value);
-            quantidadeJogador(n);            
+            quantidadeJogador(n);          
         });
 
         function quantidadeJogador(x){            
@@ -24,7 +24,7 @@ window.onload = function () {
                 div.appendChild(input);
             }
             document.querySelector("#jogadores").appendChild(div);
-            
+            getStart()
             qtdJogador.innerText="";
         }
 
@@ -32,8 +32,9 @@ window.onload = function () {
             var jogadores = document.querySelector("#jogadores > div");
             if(jogadores.childElementCount > 2){
                 var inputs = jogadores.childElementCount/2;
+                console.log(inputs)
                 if(inputs / 2 === 1){
-                    for(let i = 0 ; i < inputs.length; i++){
+                    for(let i = 0 ; i < inputs; i++){
                         console.log(jogadores.children[i].value)    
                     }
                 }
