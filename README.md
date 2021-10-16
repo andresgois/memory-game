@@ -1,6 +1,6 @@
 
 
-# Jogo da mémoria
+# Jogo da memória
 
 ## Dados do jogo
 
